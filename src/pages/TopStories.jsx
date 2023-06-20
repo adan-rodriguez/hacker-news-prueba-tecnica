@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 export default function TopStories() {
   // const { data } = useSWR("stories", () => getTopStories(1, 10));
-  const { data, isLoading, size, setSize } = useSWRInfinite(
+  const { data, isLoading, setSize } = useSWRInfinite(
     (index) => `stories/${index + 1}`,
     (key) => {
       const [, page] = key.split("/");

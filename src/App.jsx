@@ -10,7 +10,6 @@ function App() {
     <>
       <Header />
       <main className="p-2 bg-[#f6f6ef]">
-        {/* <Suspense fallback="Loading..."> */}
         <Suspense>
           <Route path="/" component={TopStories} />
           <Route path="/article/:id" component={Detail} />
